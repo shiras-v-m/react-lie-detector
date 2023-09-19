@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Borel&family=Lato:wght@400;700;900&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap');
+body{
+  font-family: 'Anton', sans-serif;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /* font-family: 'Borel', cursive;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+
+  font-family: 'Oswald', sans-serif;
+
+  font-family: 'Poppins', sans-serif; */
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://www.prankscanners.com/assets/images/background1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.detectorContainer{
+  width: 700px;
+  height: 500px;
+
+}
+.topFrame{
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 10px black;
+  height: 100px;
+  background-image: url('https://www.prankscanners.com/assets/images/background3.jpg');
 }
 
-.App-link {
-  color: #61dafb;
+.lieCircleContainer{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border:1px solid black;
+  outline: 5px solid gainsboro;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lieCircleInnerContainer{
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: rgba(10, 10, 10, 0.194);
+  box-shadow: 0 0 30px black;
+}
+.truthCircleContainer{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border:1px solid black;
+  outline: 5px solid gainsboro;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.truthCircleInnerContainer{
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: rgba(10, 10, 10, 0.194);
+  box-shadow: 0 0 30px black;
+}
+.line{
+  border-top: 7px black;
+  width: 60%;
+  height: 5px;
+  background-color: brown;
+  box-shadow: 0 0 10px black;
+}
+
+.ResultContainer{
+  border-top: 5px solid rgb(100, 100, 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  width: 100%;
+  height: 150px;
+  background-color: rgba(41, 41, 41, 0.631);
+
+  box-shadow: 0 0 10px black;
+
+
+}
+.ResultInnerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: black;
+  box-shadow: 0 0 10px red;
+  border: 3px solid rgb(118, 118, 118);
+  
+}
+.resultTxt{
+  /* color: green; */
+  color: red ;
+  font-size: 20px;
+  /* text-shadow: 0 0 10px rgb(0, 193, 0); */
+  text-shadow: 0 0 10px rgb(219, 1, 1);
+}
+.truthTxt{
+    color: rgb(0, 207, 0);
+  font-size: 20px;
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.693);
+}
+.fingerScannerContainer{
+
+  border-top: 5px solid rgb(100, 100, 100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(60, 60, 60);
+  box-shadow: 0 0 10px black;
+}
+.fingerScannerInnerContainer{
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 110px;
+  background: rgb(114, 114, 114);
+  border-radius: 10px;
+  box-shadow:   0px 0px 20px black;
+  cursor: pointer;
+  
+}
+.shadowContainer{
+  width: 10%;
+  height: 10%;
+  box-shadow: 0 0 20px black
+}
+
+.fingerScannerImage{
+  width: 100%;
+  height: 100%;
+
+}
+.blurPrint{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.scanningLine{
+
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(208, 40, 40);
+  box-shadow: 0 0 10px red;
+}
+.fingerScannerInnerContainer:active > .scanningLine{
+  animation: scannerLineAnimation 4s infinite ease;
+}
+@keyframes scannerLineAnimation{
+  0%{
+    top: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    top:105px;
+  }
+  100%{
+    top:0px;
   }
 }
