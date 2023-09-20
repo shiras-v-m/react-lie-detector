@@ -6,3 +6,6 @@
 .fingerScannerInnerContainer{
   
 }
+body{
+  overflow: hidden;
+}
